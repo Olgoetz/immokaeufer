@@ -5,6 +5,8 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/footer";
+import NavbarMobile from "@/components/navbar-mobile";
+import ScrollToTopButton from "@/components/scroll-to-top-button";
 
 const inter = Inter({ subsets: ["latin"] });
 const chivo = Chivo({ subsets: ["latin"] });
@@ -22,8 +24,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(chivo.className, "")}>
         <Navbar />
+        <NavbarMobile />
         {children}
         <Footer />
+        <ScrollToTopButton />
       </body>
     </html>
   );

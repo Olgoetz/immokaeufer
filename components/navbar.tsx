@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <main>
       <nav>
-        <ul className="flex justify-between max-w-[1000px] mx-auto h-24 items-center mb-5">
+        <ul className="hidden md:flex justify-between max-w-[1000px] mx-auto h-24 items-center mb-5">
           {navLinks.map((link) => (
             <Link
               href={link.path}
