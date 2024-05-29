@@ -18,7 +18,7 @@ function NavbarMobile() {
         <SheetTrigger className="float-right p-4">
           <Menu />
         </SheetTrigger>
-        <SheetContent className="w-full" side={"left"}>
+        <SheetContent className="w-3/5 md:w-full" side={"left"}>
           {/* <SheetHeader>
             <SheetTitle>Are you absolutely sure?</SheetTitle>
             <SheetDescription>
@@ -26,7 +26,7 @@ function NavbarMobile() {
               account and remove your data from our servers.
             </SheetDescription>
           </SheetHeader> */}
-          <ul className="flex flex-col h-full md:hidden justify-between text-lg items-center">
+          <ul className="flex flex-col h-full md:hidden justify-between text-lg text-center items-center">
             {navLinks.map((link) => (
               <Link
                 href={link.path}

@@ -4,7 +4,7 @@ function SustainableRev() {
   return (
     <main id="nachhaltige-revitalisierung" className="pb-20">
       <div className="container">
-        <h2 className="text-5xl font-bold uppercase py-10 text-center">
+        <h2 className="text-3xl md:text-5xl font-bold uppercase py-10 text-center">
           Nachhaltige Revitalisierung
         </h2>
 
