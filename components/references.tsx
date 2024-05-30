@@ -3,7 +3,7 @@ import React from "react";
 
 function References() {
   return (
-    <main id="references" className="bg-black pb-10 text-white">
+    <main id="referenzen" className="bg-black pb-10 text-white">
       <div className="container">
         <h2 className="text-5xl text-green-400 font-bold uppercase py-10 text-center">
           Referenzen

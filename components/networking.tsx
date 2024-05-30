@@ -39,7 +39,7 @@ const topics: Array<any> = [
 
 function Networking() {
   return (
-    <main id="networking" className="pb-10">
+    <main id="netzwerken" className="pb-10">
       <div className="container">
         <h2 className="text-5xl text-green-400 font-bold uppercase py-10 text-center">
           Netzwerken
