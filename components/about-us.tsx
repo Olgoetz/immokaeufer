@@ -31,7 +31,7 @@ const vita = [
 
 function AboutUs() {
   return (
-    <main id="ueber-uns" className="bg-black pb-10">
+    <main id="ueber-uns" className="bg-black py-10">
       <div className="container">
         <h2 className="text-5xl text-green-400 font-bold uppercase py-10 text-center">
           Über uns

@@ -8,7 +8,7 @@ function SustainableRev() {
           Nachhaltige Revitalisierung
         </h2>
 
-        <div className="grid gird-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="col-span-1">
             <p className="pt-8 first-letter:text-5xl first-letter:font-bold first-letter:float-start first-letter:me-3">
               In Deutschland haben wir einen Wohn- Gebäudebestand von 19 Mio.,

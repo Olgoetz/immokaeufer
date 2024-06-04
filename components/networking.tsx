@@ -1,5 +1,13 @@
 import React from "react";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Euro, Handshake } from "lucide-react";
+
 const topics: Array<any> = [
   {
     label: "Asset Deals",
@@ -39,9 +47,9 @@ const topics: Array<any> = [
 
 function Networking() {
   return (
-    <main id="netzwerken" className="pb-10">
-      <div className="container">
-        <h2 className="text-5xl text-green-400 font-bold uppercase py-10 text-center">
+    <main id="netzwerken" className="pb-20">
+      <div className="container max-w-[1000px] mx-auto">
+        <h2 className="text-5xl text-green-400 font-bold uppercase py-10 text-center ">
           Netzwerken
         </h2>
         <p className="pb-10">
@@ -56,7 +64,7 @@ function Networking() {
           kaufmännische und technische Abwicklung, Marktzugang, Netzwerk an
           Architekten, Handwerkern, Energieberatern, Baustoffhändlern u.a.
         </p>
-        <div className="grid md:grid-cols-4 gap-4">
+        {/* <div className="grid md:grid-cols-4 gap-4">
           {topics.map((t) => (
             <div
               key={t.label}
@@ -65,9 +73,26 @@ function Networking() {
               <h5 className="text-white">{t.label}</h5>
             </div>
           ))}
+        </div> */}
+
+        <div className=" mx-auto">
+          <Accordion type="single" className="rounded-lg  " collapsible>
+            {topics.map((t, i) => (
+              <AccordionItem key={i} className="px-4 " value={`item-${i}`}>
+                <AccordionTrigger>{t.label}</AccordionTrigger>
+                <AccordionContent>
+                  <ul>
+                    {t.content.map((c: string) => (
+                      <li key={c}>- {c}</li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
 
-        <p className="py-10">
+        <p className="pt-10">
           Ein nachhaltiges Netzwerk ist das A und O für gemeinsamen Erfolg.
           Zögern Sie nicht und lassen Sie uns bei einem Kaffee, Tee bzw. einem
           leckeren Kölsch - gerne auch Pils o-ä. - kennenlernen und die
