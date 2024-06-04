@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 // import SocialMedia from "./social-media";
-import { DOMAIN } from "@/lib/contant";
+import { DOMAIN } from "@/lib/constants";
 export const Footer = () => {
   const [currentYear, setCurrentYear] = useState<number>();
 
