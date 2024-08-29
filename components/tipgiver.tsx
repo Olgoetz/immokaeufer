@@ -88,7 +88,7 @@ function Tipgiver() {
         <div className="flex items-center ">
           <Star className="size-12 mr-5" />
           <h3 className="font-bold text-2xl py-14">
-            <h3>In vier Schritten zur Provision - so einfach geht&apos;s</h3>
+            <p>In vier Schritten zur Provision - so einfach geht&apos;s</p>
           </h3>
         </div>
 

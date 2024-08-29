@@ -1,5 +1,6 @@
 import AboutUs from "@/components/about-us";
 import Contact from "@/components/contact";
+import Countdown from "@/components/countdown";
 import Hero from "@/components/hero";
 import Networking from "@/components/networking";
 import PurchasProfile from "@/components/purchase-profile";
@@ -11,7 +12,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="">
-      <Hero />
+      {/* <Hero />
 
       <PurchasProfile />
       <AboutUs />
@@ -19,7 +20,8 @@ export default function Home() {
       <References />
       <Networking />
       <Tipgiver />
-      <Contact />
+      <Contact /> */}
+      <Countdown />
     </main>
   );
 }

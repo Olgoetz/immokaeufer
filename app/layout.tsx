@@ -23,11 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(chivo.className, "")}>
-        <Navbar />
-        <NavbarMobile />
+        {/* <Navbar />
+        <NavbarMobile /> */}
         {children}
-        <Footer />
-        <ScrollToTopButton />
+        {/* <Footer />
+        <ScrollToTopButton /> */}
       </body>
     </html>
   );
