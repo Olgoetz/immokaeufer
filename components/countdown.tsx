@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import "./countdown.css"; // We will add the custom CSS here
 
 import Image from "next/image";
+
+import Logo from "../public/logo.jpg";
+
 import { Card, CardHeader, CardTitle } from "./ui/card";
 interface TimeLeft {
   days?: number;
@@ -65,7 +68,11 @@ const Countdown: React.FC = () => {
     if (value === undefined || value === 0) return null;
 
     return (
-      <div key={interval} className="flex flex-col items-center mx-2">
+      <div
+        key={interval}
+        suppressHydrationWarning={true}
+        className="flex flex-col items-center mx-2"
+      >
         <span className="text-4xl font-bold text-black">{value}</span>
         <span className="uppercase text-xs text-gray-300">
           {languageRecord[interval]}
@@ -107,7 +114,7 @@ const Countdown: React.FC = () => {
   return (
     <>
       <div className="z-[1000] w-full bg-[#00E8A5]">
-        <Image src="/logo.jpg" alt="logo" width={300} height={300} />
+        <Image src={Logo} alt="logo" quality={100} width={300} height={300} />
       </div>
 
       <div
@@ -126,7 +133,7 @@ const Countdown: React.FC = () => {
           Ihre Immobilie unkompliziert, diskret und schnell.
         </p>
         <h2 className="text-2xl font-bold text-white mb-4">
-          Wir suchen und ankaufen:
+          Wir suchen und kaufen an:
         </h2>
 
         <div className="grid md:grid-cols-3 gap-2 text-white text-center mb-4">
