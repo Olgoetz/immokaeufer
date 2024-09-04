@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from "react";
 import "./countdown.css"; // We will add the custom CSS here
 
-import SantaClaus from "@/public/santa_claus.png";
+import Image from "next/image";
+import { Card, CardHeader, CardTitle } from "./ui/card";
 interface TimeLeft {
   days?: number;
   hours?: number;
@@ -16,6 +17,18 @@ const languageRecord: Record<string, string> = {
   minutes: "Minuten",
   seconds: "Sekunden",
 };
+
+const facilities: string[] = [
+  "Mehrfamilienhäuser",
+  "Appartementhäuser",
+  "Wohn- und Geschäftshäuser",
+  "Dachstühle",
+  "Apartments und Eigentumswohnungen",
+  "Gewerbeobjekte",
+  "Garagen",
+  "Abbruchreife Immobilien",
+  "Baugrundstücke",
+];
 
 const Countdown: React.FC = () => {
   const calculateTimeLeft = (): TimeLeft => {
@@ -92,48 +105,87 @@ const Countdown: React.FC = () => {
   }, []);
 
   return (
-    <div
-      suppressHydrationWarning={true}
-      className="flex justify-center items-center h-screen bg-black"
-    >
-      {/* Snowflakes */}
-      {[...Array(50)].map((_, i) => (
-        <div key={i} className={`snowflake snowflake-${i}`}>
-          ❄
-        </div>
-      ))}
+    <>
+      <div className="z-[1000] w-full bg-[#00E8A5]">
+        <Image src="/logo.jpg" alt="logo" width={300} height={300} />
+      </div>
 
-      {/* Santa Claus */}
       <div
-        className="absolute santa"
-        style={{
-          top: santaPosition.top,
-          left: santaPosition.left,
-          transition: "top 2s ease, left 2s ease",
-        }}
+        suppressHydrationWarning={true}
+        className="flex flex-col justify-center items-center min-h-screen bg-[#00A58B]"
       >
-        <img
-          src="/santa_claus.png" // Replace with actual SVG path or URL
-          alt="Santa Claus"
-          className="w-32 h-auto"
-        />
-      </div>
-
-      <div className="p-6 bg-white rounded-2xl shadow-lg text-center">
-        <h1 className="text-2xl font-semibold text-gray-700 mb-4">
-          Wir gehen am 6. Dezember 2024 live!
+        <h1 className="text-4xl text-center font-bold text-white pt-4 pb-10">
+          Willkommen bei immoankäufer.de!
         </h1>
-        <div className="flex justify-center">
-          {timeComponents.filter(Boolean).length ? (
-            timeComponents
-          ) : (
-            <span className="text-4xl font-bold text-white">
-              Countdown Complete!
-            </span>
-          )}
+        <p className="px-4 text-white text-center mb-8">
+          Unsere neue Internetpräsenz kommt pünktlich zum Nikolaus am 6.
+          Dezember 2024! Bis dahin arbeiten wir mit Hochdruck daran, Ihnen eine
+          informative und attraktive Internetseite zu bieten. Wir sind erfahrene
+          Immobilieninvestoren mit einem Fokus auf Nachhaltigkeit und die
+          energetische Sanierung von Bestandsgebäuden. Bei uns verkaufen Sie
+          Ihre Immobilie unkompliziert, diskret und schnell.
+        </p>
+        <h2 className="text-2xl font-bold text-white mb-4">
+          Wir suchen und ankaufen:
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-2 text-white text-center mb-4">
+          {facilities.map((facility, index) => (
+            <Card key={index} className="">
+              <CardHeader>
+                <CardTitle className="text-sm">{facility}</CardTitle>
+              </CardHeader>
+            </Card>
+          ))}
         </div>
+        {/* Snowflakes */}
+        {[...Array(50)].map((_, i) => (
+          <div key={i} className={`snowflake snowflake-${i}`}>
+            ❄
+          </div>
+        ))}
+
+        {/* Santa Claus */}
+        <div
+          className="absolute santa"
+          style={{
+            top: santaPosition.top,
+            left: santaPosition.left,
+            transition: "top 2s ease, left 2s ease",
+          }}
+        >
+          <img
+            src="/santa_claus.png" // Replace with actual SVG path or URL
+            alt="Santa Claus"
+            className="w-32 h-auto"
+          />
+        </div>
+
+        <div className="p-4 bg-white rounded-2xl shadow-lg text-center mb-4">
+          <h1 className="text-2xl font-semibold text-gray-700 mb-4">
+            Wir gehen am 6. Dezember 2024 live!
+          </h1>
+          <div suppressHydrationWarning={true} className="flex justify-center">
+            {timeComponents.filter(Boolean).length ? (
+              timeComponents
+            ) : (
+              <span className="text-4xl font-bold text-white">
+                Countdown Complete!
+              </span>
+            )}
+          </div>
+        </div>
+
+        <p className="px-4 pb-2 text-white text-center">
+          Unser Schwerpunkt liegt auf der Entwicklung und Vermietung von Wohn-
+          und Gewerbeimmobilien in Nordrhein-Westfalen – insbesondere in und um
+          Bonn, Köln, Leverkusen, Düsseldorf, Duisburg und Essen.
+          <span className="font-bold"> Bleiben Sie dran! </span>
+          Unsere neue Webseite wird Sie überraschen – genauso wie der Nikolaus!
+          Der Countdown läuft...
+        </p>
       </div>
-    </div>
+    </>
   );
 };
 
