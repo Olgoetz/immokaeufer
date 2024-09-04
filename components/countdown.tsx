@@ -114,7 +114,14 @@ const Countdown: React.FC = () => {
   return (
     <>
       <div className="z-[1000] w-full bg-[#00E8A5]">
-        <Image src={Logo} alt="logo" quality={100} width={300} height={300} />
+        <Image
+          src={Logo}
+          alt="logo"
+          priority={true}
+          quality={100}
+          width={300}
+          height={300}
+        />
       </div>
 
       <div
