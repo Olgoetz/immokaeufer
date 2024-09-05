@@ -131,7 +131,7 @@ const Countdown: React.FC = () => {
         <h1 className="text-4xl text-center font-bold text-white pt-4 ">
           Willkommen bei immoankäufer.de!
         </h1>
-        <div className="p-4 bg-[#00A58B] text-white  rounded-2xl border border-white text-center my-8">
+        <div className="p-4 bg-[#00A58B] text-white  text-center my-8">
           <h1 className="text-2xl font-semibold mb-4">
             Wir gehen am 6. Dezember 2024 live!
           </h1>
