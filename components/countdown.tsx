@@ -73,7 +73,7 @@ const Countdown: React.FC = () => {
         suppressHydrationWarning={true}
         className="flex flex-col items-center mx-2"
       >
-        <span className="text-4xl font-bold text-black">{value}</span>
+        <span className="text-4xl font-bold text-white">{value}</span>
         <span className="uppercase text-xs text-gray-300">
           {languageRecord[interval]}
         </span>
@@ -128,9 +128,23 @@ const Countdown: React.FC = () => {
         suppressHydrationWarning={true}
         className="flex flex-col justify-center items-center min-h-screen bg-[#00A58B]"
       >
-        <h1 className="text-4xl text-center font-bold text-white pt-4 pb-10">
+        <h1 className="text-4xl text-center font-bold text-white pt-4 ">
           Willkommen bei immoankäufer.de!
         </h1>
+        <div className="p-4 bg-[#00A58B] text-white  rounded-2xl border border-white text-center my-8">
+          <h1 className="text-2xl font-semibold mb-4">
+            Wir gehen am 6. Dezember 2024 live!
+          </h1>
+          <div suppressHydrationWarning={true} className="flex justify-center ">
+            {timeComponents.filter(Boolean).length ? (
+              timeComponents
+            ) : (
+              <span className="text-4xl font-bold text-white">
+                Countdown Complete!
+              </span>
+            )}
+          </div>
+        </div>
         <p className="px-4 text-white text-center mb-8">
           Unsere neue Internetpräsenz kommt pünktlich zum Nikolaus am 6.
           Dezember 2024! Bis dahin arbeiten wir mit Hochdruck daran, Ihnen eine
@@ -173,21 +187,6 @@ const Countdown: React.FC = () => {
             alt="Santa Claus"
             className="w-32 h-auto"
           />
-        </div>
-
-        <div className="p-4 bg-white rounded-2xl shadow-lg text-center mb-4">
-          <h1 className="text-2xl font-semibold text-gray-700 mb-4">
-            Wir gehen am 6. Dezember 2024 live!
-          </h1>
-          <div suppressHydrationWarning={true} className="flex justify-center">
-            {timeComponents.filter(Boolean).length ? (
-              timeComponents
-            ) : (
-              <span className="text-4xl font-bold text-white">
-                Countdown Complete!
-              </span>
-            )}
-          </div>
         </div>
 
         <p className="px-4 pb-2 text-white text-center">
