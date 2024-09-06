@@ -113,7 +113,7 @@ const Countdown: React.FC = () => {
 
   return (
     <>
-      <div className="z-[1000] w-full bg-[#00E8A5]">
+      <div className="z-[1000] bg-[#00E8A5]">
         <Image
           src={Logo}
           alt="logo"
@@ -131,7 +131,7 @@ const Countdown: React.FC = () => {
         <h1 className="text-4xl text-center font-bold text-white pt-4 ">
           Willkommen bei immoankäufer.de!
         </h1>
-        <div className="p-4 bg-[#00A58B] text-white  text-center my-8">
+        <div className="p-4 bg-[#00A58B] text-white border border-white rounded-md text-center shadow-xl my-8">
           <h1 className="text-2xl font-semibold mb-4">
             Wir gehen am 6. Dezember 2024 live!
           </h1>
@@ -145,7 +145,7 @@ const Countdown: React.FC = () => {
             )}
           </div>
         </div>
-        <p className="px-4 text-white text-center mb-8">
+        <p className="px-4 text-white text-center mb-8 max-w-[1000px] ">
           Unsere neue Internetpräsenz kommt pünktlich zum Nikolaus am 6.
           Dezember 2024! Bis dahin arbeiten wir mit Hochdruck daran, Ihnen eine
           informative und attraktive Internetseite zu bieten. Wir sind erfahrene
@@ -157,7 +157,7 @@ const Countdown: React.FC = () => {
           Wir suchen und kaufen an:
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-2 text-white text-center mb-4">
+        <div className="grid md:grid-cols-3 gap-2 max-w-[1000px] w-full  text-white text-center mb-4">
           {facilities.map((facility, index) => (
             <Card key={index} className="">
               <CardHeader>
@@ -189,7 +189,7 @@ const Countdown: React.FC = () => {
           />
         </div>
 
-        <p className="px-4 pb-2 text-white text-center">
+        <p className="px-4 pb-2 text-white text-center max-w-[1000px] w-full">
           Unser Schwerpunkt liegt auf der Entwicklung und Vermietung von Wohn-
           und Gewerbeimmobilien in Nordrhein-Westfalen – insbesondere in und um
           Bonn, Köln, Leverkusen, Düsseldorf, Duisburg und Essen.
