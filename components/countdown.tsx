@@ -145,7 +145,7 @@ const Countdown: React.FC = () => {
             )}
           </div>
         </div>
-        <p className="px-4 text-white text-center mb-8 max-w-[1000px] ">
+        <p className=" text-white text-center mb-8 max-w-[1000px] ">
           Unsere neue Internetpräsenz kommt pünktlich zum Nikolaus am 6.
           Dezember 2024! Bis dahin arbeiten wir mit Hochdruck daran, Ihnen eine
           informative und attraktive Internetseite zu bieten. Wir sind erfahrene
@@ -189,7 +189,7 @@ const Countdown: React.FC = () => {
           />
         </div>
 
-        <p className="px-4 pb-2 text-white text-center max-w-[1000px] w-full">
+        <p className="pb-2 text-white text-center max-w-[1000px] w-full">
           Unser Schwerpunkt liegt auf der Entwicklung und Vermietung von Wohn-
           und Gewerbeimmobilien in Nordrhein-Westfalen – insbesondere in und um
           Bonn, Köln, Leverkusen, Düsseldorf, Duisburg und Essen.
