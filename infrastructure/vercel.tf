@@ -30,7 +30,7 @@ resource "vercel_project_domain" "prod0" {
 
 resource "vercel_project_domain" "prod2" {
   project_id = vercel_project.immokaeufer.id
-  domain     = "www.immoankauefer.de"
+  domain     = "www.immoankaeufer.de"
 }
 
 # locals {
