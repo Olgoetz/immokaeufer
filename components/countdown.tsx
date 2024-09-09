@@ -126,7 +126,7 @@ const Countdown: React.FC = () => {
 
       <div
         suppressHydrationWarning={true}
-        className="flex flex-col justify-center items-center min-h-screen bg-[#00A58B]"
+        className="flex flex-col justify-center items-center min-h-screen bg-[#00A58B] container"
       >
         <h1 className="text-4xl text-center font-bold text-white pt-4 ">
           Willkommen bei immoankäufer.de!
@@ -157,7 +157,7 @@ const Countdown: React.FC = () => {
           Wir suchen und kaufen an:
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-2 max-w-[1000px] w-full  text-white text-center mb-4">
+        <div className="grid md:grid-cols-3 gap-2 md:max-w-[1000px]  w-full  text-white text-center mb-4">
           {facilities.map((facility, index) => (
             <Card key={index} className="">
               <CardHeader>

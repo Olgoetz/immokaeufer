@@ -15,17 +15,23 @@ resource "vercel_project" "immokaeufer" {
 
 }
 
-# resource "vercel_project_domain" "prod" {
-#   project_id           = vercel_project.novotec.id
-#   domain               = "novotec-gruppe.de"
-#   redirect             = vercel_project_domain.prod2.domain
-#   redirect_status_code = 301
-# }
+resource "vercel_project_domain" "prod0" {
+  project_id           = vercel_project.immokaeufer.id
+  domain               = "immoankäufer.de"
+  redirect             = vercel_project_domain.prod2.domain
+  redirect_status_code = 301
+}
+resource "vercel_project_domain" "prod1" {
+  project_id           = vercel_project.immokaeufer.id
+  domain               = "immoankaeufer.de"
+  redirect             = vercel_project_domain.prod2.domain
+  redirect_status_code = 301
+}
 
-# resource "vercel_project_domain" "prod2" {
-#   project_id = vercel_project.novotec.id
-#   domain     = "www.novotec-gruppe.de"
-# }
+resource "vercel_project_domain" "prod2" {
+  project_id = vercel_project.immokaeufer.id
+  domain     = "www.immoankauefer.de"
+}
 
 # locals {
 #   env_variables_all = {
