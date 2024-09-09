@@ -112,7 +112,7 @@ const Countdown: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <div className="bg-[#00A58B]">
       <div className="z-[1000] bg-[#00E8A5]">
         <Image
           src={Logo}
@@ -198,7 +198,7 @@ const Countdown: React.FC = () => {
           Der Countdown läuft...
         </p>
       </div>
-    </>
+    </div>
   );
 };
 
