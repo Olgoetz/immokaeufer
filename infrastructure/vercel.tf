@@ -15,17 +15,17 @@ resource "vercel_project" "immokaeufer" {
 
 }
 
+# resource "vercel_project_domain" "prod0" {
+#   project_id           = vercel_project.immokaeufer.id
+#   domain               = "immoankäufer.de"
+#   redirect             = vercel_project_domain.prod2.domain
+#   redirect_status_code = 301
+# }
 resource "vercel_project_domain" "prod0" {
-  project_id           = vercel_project.immokaeufer.id
-  domain               = "immoankäufer.de"
-  redirect             = vercel_project_domain.prod2.domain
-  redirect_status_code = 301
-}
-resource "vercel_project_domain" "prod1" {
   project_id           = vercel_project.immokaeufer.id
   domain               = "immoankaeufer.de"
   redirect             = vercel_project_domain.prod2.domain
-  redirect_status_code = 301
+  redirect_status_code = 308
 }
 
 resource "vercel_project_domain" "prod2" {
